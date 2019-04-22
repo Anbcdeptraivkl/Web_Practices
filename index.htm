@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Practices</title>
+</head>
+
+<body>
+    <h1 id="target">A Random Heading</h1>
+    <button id="trigger">Change</button>
+
+    <script>
+        var heading = document.getElementById("target");
+        var changeBtn = document.getElementById("trigger");
+
+        changeBtn.onclick = function () {
+            heading.innerHTML = "Changed!";
+        };
+    </script>
+</body>
+
+</html>
