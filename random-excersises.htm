@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Practices</title>
+
+    <link rel="stylesheet" href="style/reset.css" type="text/css">
+    <link rel="stylesheet" href="style/main.css" type="text/css"> 
+    
+</head>
+
+<body>
+    <!--***DOM PRACTICES***-->
+    <h1>CREATING ELEMENTS:</h1>
+
+    <button id="createBtn">Create</button>
+
+    <script>
+
+        let createBtn = document.getElementById("createBtn");
+
+        createBtn.onclick = function () {
+            setTimeout(
+                function () {
+                    var head = document.createElement("h1");
+                    var headText = document.createTextNode("Big damn Heading!");
+
+                    head.appendChild(headText);
+                    document.body.appendChild(head);
+                    alert("Heading Created");
+                },
+                1000
+            );
+        }
+
+    </script>
+
+
+    <hr>
+
+
+    <h1>CHANGING ELEMENTS:</h1>
+    <h2 id="target">A Random Heading</h2>
+
+    <button id="trigger">Change</button>
+
+    <script>
+        var heading = document.getElementById("target");
+        var changeBtn = document.getElementById("trigger");
+
+        changeBtn.onclick = function () {
+            heading.innerHTML = "Changed!";
+        };
+    </script>
+
+    <br>
+
+    <script>
+        //Evaluate the string and update the value of document's attributes:
+        function SetBody (attName, value) {
+            eval("document.body." + attName + " = \"" + value + "\"");
+        }
+    </script>
+
+    <div id="domChanging">
+        <form>
+            <select onchange="SetBody('text', this.options[this.selectedIndex].value)">
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+            </select>
+        </form>
+    </div>
+
+
+    <hr>
+
+
+    <h1>SLIDESHOW</h1>
+    <div id="slideshow">
+        <div class="slide">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/1200px-Lion_waiting_in_Namibia.jpg">
+        </div>
+
+        <div class="slide">
+            <img src="http://www.krugerpark.co.za/images/1-lion-charge-gc590a.jpg">
+        </div>
+
+        <div class="slide">
+            <img src="https://conservationaction.co.za/wp-content/uploads/2018/08/CHAS1066.jpg">
+        </div>
+    </div>
+
+    <!--jQuery library-->
+    <script src="src/jquery-3.4.1.js"></script>
+
+    <script src="src/slideshow.js"></script>
+
+</body>
+
+</html>

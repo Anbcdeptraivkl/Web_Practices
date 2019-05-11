@@ -1,0 +1,52 @@
+#domChanging {
+    position: relative;
+
+    display: block;
+
+    margin: 100px auto;
+    border: 1px solid black;
+    padding: 10px;
+
+    width: 400px;
+    min-height: 300px;
+    height: auto;
+}
+
+#slideshow {
+    position: relative;
+
+    margin: 20px auto;
+    border: 2px solid black;
+
+    width: 360px;
+    height: 240px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.slide {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+/* .slide:nth-child(0) {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/1200px-Lion_waiting_in_Namibia.jpg');
+
+}
+
+.slide:nth-child(1) {
+    background-image: url('http://www.krugerpark.co.za/images/1-lion-charge-gc590a.jpg');
+}
+
+.slide:nth-child(2) {
+    background-image: url('https://conservationaction.co.za/wp-content/uploads/2018/08/CHAS1066.jpg');
+} */

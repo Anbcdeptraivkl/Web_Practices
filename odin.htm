@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Odin Practices</title>
+
+    <link>
+</head>
+
+<body>
+    <!--LOGIN CHECKING-->
+    <script>
+        Login();
+
+        function Login() {            
+            let userName = prompt("Enter your user name: ", "Name");
+
+            if (userName == null || userName == undefined) {
+                alert("Cancelled");
+            } 
+            else 
+                if (userName == 'Admin') {
+                    CheckPassword();
+                } else 
+                    alert("Don't know you!");
+        }
+
+        function CheckPassword() {            
+            let password = prompt("Enter Password: ", "Password");
+            if (password == null || password == undefined) {
+                alert("Cancelled");
+            } else 
+                if (password == "TheMaster") {
+                    alert("Welcome!");
+                } else 
+                    alert("Wrong password");
+        }
+    </script>
+</body>
