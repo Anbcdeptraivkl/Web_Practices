@@ -10,9 +10,55 @@
 </head>
 
 <body>
+
+    <!--FUNCTION PRACTICES-->
+    <h1>FUNCTION PRACTICES</h1>
+
+    <script>
+
+        function Add7(a) {
+            return a + 7;
+        }
+
+        function Multiply(a, b) {
+            return a * b;
+        }
+
+        function Capitalize(string) {
+
+            let newString = string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+
+            return newString;
+        }
+
+        function LastLetter(string) {
+
+            return string[string.length - 1];
+        }
+
+        //Assigning:
+        let add7Var = Add7(3);
+        let multi = Multiply(2, 5);
+
+        let capi = Capitalize("a FuCking StrINg.");
+        let lastChar = LastLetter("abcd");
+
+        // Start Working:
+        console.log(add7Var);
+        console.log(multi);
+        console.log(capi);
+        console.log(lastChar);
+
+    </script>
+    
+
+    <hr>
+
+
     <!--LOGIN CHECKING-->
     <script>
-        Login();
+        // Start Working:
+        // Login();
 
         function Login() {            
             let userName = prompt("Enter your user name: ", "Name");
