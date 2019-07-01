@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Practices</title>
 
-    <link rel="stylesheet" href="style/reset.css" type="text/css">
+    <!-- <link rel="stylesheet" href="style/reset.css" type="text/css"> -->
     <link rel="stylesheet" href="style/main.css" type="text/css"> 
     
 </head>
@@ -16,6 +16,41 @@
 
      <!--jQuery library-->
      <script src="src/jquery-3.4.1.js"></script>
+
+    <!--**JS PRACTICES**-->
+    <h1>FUNCTIONS</h1>
+
+    <button id="ask-btn">Ask</button>    
+    
+    <script>
+
+        let askBtn = document.getElementById("ask-btn");
+
+        askBtn.onclick = function() {
+            ask("Confirm?", () => alert("OK"), () => alert("Cancelled"))
+            };
+
+        function ask(question, agree, cancel) {
+            if (confirm(question))
+                agree();
+            else
+                cancel();
+        }
+
+    </script> 
+
+
+    <hr>
+
+
+    <h1>JQUERY INTRO</h1>
+
+    <button class="trigger">Open</button>
+
+    <section class="overlay">
+        <button class="trigger">Close</button>
+    </section>
+
 
     <!--***DOM PRACTICES***-->
     <h1>CREATING ELEMENTS:</h1>
@@ -97,9 +132,15 @@
         </div>
     </div>
 
-   
-    <!--Script References-->
+
+    <hr>
+
+
+    <!--**SCRIPT REFERENCES**-->
     <script src="src/slideshow.js"></script>
+
+    <script src="src/jq-demo.js"></script>
+
 
 </body>
 
