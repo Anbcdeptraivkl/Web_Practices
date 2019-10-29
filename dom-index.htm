@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Practices</title>
+</head>
+<body>
+    <div id="a">Hi</div>
+    <span id="b">Span</span>
+    <div id="c"></div>
+
+    <hr>
+
+    <span id="question">be</span>
+
+
+
+    <!--SCRIPTS-->
+    <script>
+        // Inner HTML:
+        document.getElementById('a').innerHTML = '<strong>Howdy!</strong>';
+
+        // Outer HTML:
+        document.getElementById('b').outerHTML = '<div class="new-div">Div!</div>'
+
+        // Text Content:
+        document.getElementById('c').textContent = 'Hola C';
+
+        // Adjacent Inserting:
+        var question = document.getElementById('question');
+
+        question.insertAdjacentHTML('beforebegin', '<span>Would-</span>');
+        question.insertAdjacentHTML('afterbegin', '<span>you-</span>');
+        question.insertAdjacentHTML('beforeend', '<span>-my-</span>');
+        question.insertAdjacentHTML('afterend', '<span>Friend?</span>');
+
+        // Log:
+        console.log(document.body.innerHTML);
+    </script>
+</body>
+</html>

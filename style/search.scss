@@ -1,0 +1,71 @@
+
+// The fake Background border, acting as container for the real input search box
+.gradient-search {
+    position: relative;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: inline-block;
+
+    background: linear-gradient(25deg, #3385ff, #4dffff);
+
+    border-radius: 100px;
+    padding: 3px;
+
+    // Style of the Actual Input
+    input {
+        position: relative;
+        z-index: 1;
+
+        display: inherit;
+
+        min-width: 14em;
+
+        margin: 0;
+        border-radius: inherit;
+        border: none;
+        outline: none;
+        padding: 5px 5px;
+
+        //Fancy Gradiating effect when focused
+        &:focus + span {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    // Gradiating Style
+    span {
+        // Positioning
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        // Below, not blocking the input
+        z-index: 0;
+
+        // Hide when not focused
+        opacity: 0;
+
+        //Scale down a lil bit at the beginning
+        transform: scale(.95, .95);
+
+        // Margin a bit bigger than the container's padding so no pixel can get through underneath
+        margin: 3.5px;
+        border-radius: inherit;
+        //Box Shadow Styles
+        box-shadow: 
+            inset 0 0 0 4px #fff,
+            0 0 0 4px #fff,
+            4px -4px 25px #3385ff,
+            -4px 4px 25px #4dffff; 
+
+        // Transition Settings
+        transition: transform .5s, opacity .25s;
+        // The user can easily click through the element
+        pointer-events: none;
+
+    }
+}
